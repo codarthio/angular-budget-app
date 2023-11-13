@@ -1,0 +1,13 @@
+<div class="dropdown">
+  <label tabindex="0" class="btn m-1"
+    >{{ months[currentDate.getMonth()] }} {{ currentDate.getFullYear() }}</label
+  >
+  <ul
+    tabindex="0"
+    class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+  >
+    <mat-card class="demo-inline-calendar-card">
+      <mat-calendar [(selected)]="currentDate"></mat-calendar>
+    </mat-card>
+  </ul>
+</div>

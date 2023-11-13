@@ -1,0 +1,17 @@
+<div class="flex items-center min-w-fit">
+  <button
+    class="btn btn-sm btn-circle btn-outline"
+    (click)="updateCurrentDate(prevDate)"
+  >
+    <span class="material-symbols-outlined"> keyboard_arrow_left </span>
+  </button>
+  <app-calendar-dropdown [currentDate]="currentDate" />
+  <button class="btn btn-sm btn-circle btn-outline">
+    <span
+      class="material-symbols-outlined"
+      (click)="updateCurrentDate(nextDate)"
+    >
+      keyboard_arrow_right
+    </span>
+  </button>
+</div>
