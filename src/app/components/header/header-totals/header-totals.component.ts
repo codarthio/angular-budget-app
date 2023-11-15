@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './header-totals.component.html',
-  styleUrl: './header-totals.component.css'
+  styleUrl: './header-totals.component.css',
 })
 export class HeaderTotalsComponent {
-
+  @Input() currentDate!: Date;
 }

@@ -1,0 +1,9 @@
+<div class="flex">
+  <app-header-calendar
+    [currentDate]="currentDate"
+    (updateCurrentMonth)="updateCurrentMonth($event)"
+    class="flex-none justify-self-start w-1/3"
+  />
+  <app-header-totals [currentDate]="currentDate" />
+  <app-header-days [currentDate]="currentDate" />
+</div>

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
@@ -16,19 +16,10 @@ import { MatNativeDateModule } from '@angular/material/core';
   styleUrl: './calendar-dropdown.component.css',
 })
 export class CalendarDropdownComponent {
-  months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
   @Input() currentDate!: Date;
+
+  dtf = new Intl.DateTimeFormat('en-us', { month: 'long', year: 'numeric' });
+  getFormattedMonth(date: Date): string {
+    return this.dtf.format(date);
+  }
 }
